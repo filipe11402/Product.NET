@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ProductWepApp.Models.Product>
+
+@if (Model.Count() > 0)
+{
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Stock Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+        <tr>
+            <td>@product.productName</td>
+            <td>@product.amount</td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
+<p>No items in database</p>
