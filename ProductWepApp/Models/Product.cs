@@ -10,12 +10,12 @@ namespace ProductWepApp.Models
     public class Product: IProducts
     {
 
-        [Key]
+        private int _idCounter = 0;
         public int Id { get; set; }
-        [Required]
         public int amount { get; set; }
-        [Required]
         public string productName { get; set; }
+
+        
 
 
     }

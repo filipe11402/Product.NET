@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProductWepApp.Data;
 using ProductWepApp.Models;
 using System;
 using System.Collections.Generic;
@@ -11,16 +10,15 @@ namespace ProductWepApp.Controllers
     public class ProductController : Controller
     {
 
-        private readonly ApplicationDbContext _db;
-
-        public ProductController(ApplicationDbContext db) 
-        {
-            _db = db;
-        }
-
         public IActionResult Index()
         {
-            IEnumerable<Product> prodList = _db.Products;
+            List<Product> prodList = new List<Product>()
+            {
+                new Product(id=1, amount=10, prodName="teste"),
+                new Product(100, "feijao"),
+            };
+            
+
             return View(prodList);
         }
     }
