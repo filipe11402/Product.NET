@@ -14,8 +14,8 @@ namespace ProductWepApp.Controllers
         {
             List<Product> prodList = new List<Product>()
             {
-                new Product(id=1, amount=10, prodName="teste"),
-                new Product(100, "feijao"),
+                new Product {Id=1, amount=10, productName="teste" },
+                new Product {Id=2, amount=23, productName="arroz" },
             };
             
 
